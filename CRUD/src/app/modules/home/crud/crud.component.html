@@ -1,0 +1,41 @@
+<div class="mt-2 p-4 bg-secondary text-white rounded">
+    <h2>Reactive Form</h2>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="userForm" class="bg-light p-4 rounded">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstName">
+                        @if(userForm.get('firstName')?.hasError('required')){
+                            <div class="text-danger">First Name is required</div>
+                        }
+                    </div>
+                    <div class="col-6">
+                        <label for="">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName">
+                        @if(userForm.get('lastName')?.hasError('required')){
+                            <div class="text-danger">Last Name is required</div>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label for="">Email Id</label>
+                        <input type="text" class="form-control" formControlName="email">
+                        @if(userForm.get('email')?.hasError('required')){
+                            <div class="text-danger">Email Id is required</div>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success" (click)="addNewUser()">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light d-flex justify-content-between px-3">
+    <a class="navbar-brand">CRUD</a>
+    <a routerLink="/login">Logout</a>
+  </nav>
+  
+  <div id="wrapper">
+  
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li>
+                <a routerLink="/home/crud" routerLinkActive="link-active">ADD</a>
+            </li>
+            <li>
+                <a routerLink="/home/list" routerLinkActive="link-active">User List</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+  
+  
+<div style="padding-left: 200px;">
+    <!-- <router-outlet></router-outlet> -->
+</div>
+
+<router-outlet></router-outlet>
